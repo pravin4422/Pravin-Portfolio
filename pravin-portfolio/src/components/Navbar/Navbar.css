@@ -1,0 +1,273 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Portfolio logo */
+
+.navbar-logo {
+  padding: 0;
+  border: none;
+
+  color: var(--white-color);
+  background-color: transparent;
+
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar-logo span {
+  color: var(--accent-color);
+}
+
+/* Right-side Navbar items */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Navigation links */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links button {
+  position: relative;
+  padding: 5px 0;
+  border: none;
+
+  color: var(--white-color);
+  background-color: transparent;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-links button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links button:hover {
+  color: var(--accent-color);
+}
+
+.nav-links button:hover::after {
+  width: 100%;
+}
+/* Active Navbar section */
+
+.nav-links button.active-link {
+  color: var(--accent-color);
+}
+
+.nav-links button.active-link::after {
+  width: 100%;
+}
+
+.nav-links button.active-link {
+  font-weight: 700;
+}
+/* Light and dark theme button */
+
+.theme-button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  color: var(--white-color);
+  background-color: transparent;
+
+  font-size: 1.25rem;
+  line-height: 1;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.theme-button:hover {
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+  transform: rotate(15deg);
+}
+
+/* Mobile menu button */
+
+.menu-button {
+  display: none;
+  width: 32px;
+  height: 25px;
+  padding: 0;
+  border: none;
+
+  background-color: transparent;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-button span {
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+
+  display: block;
+
+  background-color: var(--white-color);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Tablet Navbar */
+
+@media screen and (max-width: 1050px) {
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links button {
+    font-size: 0.82rem;
+  }
+
+  .navbar-actions {
+    gap: 12px;
+  }
+}
+
+/* Mobile Navbar */
+
+@media screen and (max-width: 850px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .menu-button {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+
+    width: 100%;
+    max-height: calc(100vh - 70px);
+    padding: 25px 0;
+
+    flex-direction: column;
+    gap: 18px;
+
+    background-color: var(--primary-color);
+    box-shadow: 0 8px 15px var(--shadow-color);
+    overflow-y: auto;
+
+    transition: left 0.3s ease;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links button {
+    color: var(--white-color);
+    font-size: 1rem;
+  }
+
+  .theme-button {
+    width: 38px;
+    height: 38px;
+    font-size: 1.15rem;
+  }
+
+  /* Change hamburger icon into X */
+
+  .menu-button.active span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+  }
+
+  .menu-button.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-button.active span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+}
+
+/* Small phone Navbar */
+
+@media screen and (max-width: 480px) {
+  .navbar-container {
+    width: calc(100% - 40px);
+  }
+
+  .navbar-logo {
+    font-size: 1.45rem;
+  }
+
+  .navbar-actions {
+    gap: 14px;
+  }
+
+  .theme-button {
+    width: 36px;
+    height: 36px;
+    font-size: 1.05rem;
+  }
+
+  .menu-button {
+    width: 29px;
+    height: 23px;
+  }
+
+  .menu-button.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .menu-button.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}

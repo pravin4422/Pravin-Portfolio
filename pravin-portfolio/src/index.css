@@ -1,0 +1,388 @@
+/* Import Google Font */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Global light-theme colour variables */
+
+:root {
+  --primary-color: #352961;
+  --secondary-color: #774181;
+  --accent-color: #e6b2c6;
+  --background-color: #f6e5e5;
+
+  --white-color: #ffffff;
+  --text-color: #352961;
+  --shadow-color: rgba(53, 41, 97, 0.15);
+
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+/* Dark-theme colour variables */
+
+body.dark-theme {
+  --primary-color: #352961;
+  --secondary-color: #c184d1;
+  --accent-color: #e6b2c6;
+  --background-color: #171321;
+
+  --white-color: #ffffff;
+  --text-color: #f6e5e5;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Remove default browser spacing */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global scrolling behaviour */
+
+html {
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Global body styles */
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+/* Remove default link styling */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Remove default list styling */
+
+ul {
+  list-style: none;
+}
+
+/* Responsive images */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form and button fonts */
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* Default button behaviour */
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile tap behaviour */
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Text selection */
+
+::selection {
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+}
+
+/* Keyboard accessibility */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+/* Smooth theme transitions */
+
+body,
+nav,
+section,
+footer,
+article,
+button,
+input,
+textarea,
+a {
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Reduce top spacing in portfolio sections */
+
+
+.skills,
+.experience,
+.projects,
+.education,
+.contact {
+  padding-top: 45px;
+}
+
+/* Dark-theme section backgrounds */
+
+body.dark-theme .home,
+body.dark-theme .skills,
+body.dark-theme .projects,
+body.dark-theme .contact {
+  background-color: #171321;
+}
+
+body.dark-theme .about,
+body.dark-theme .experience,
+body.dark-theme .education {
+  background-color: #20192c;
+}
+
+/* Dark-theme cards */
+
+body.dark-theme .skill-card,
+body.dark-theme .project-card {
+  background-color: #2a203a;
+  border-color: #774181;
+}
+
+body.dark-theme .education-card,
+body.dark-theme .highlight-item {
+  background-color: #2a203a;
+}
+
+body.dark-theme .education-card h4,
+body.dark-theme .education-location {
+  color: #f6e5e5;
+}
+
+body.dark-theme .achievement-card {
+  background-color: #2a1f4e;
+}
+
+body.dark-theme .achievement-number {
+  color: #f6e5e5;
+  background-color: #352961;
+  border-color: #c184d1;
+}
+
+body.dark-theme .achievement-event {
+  color: #f6e5e5;
+}
+
+/* Dark-theme primary text */
+
+body.dark-theme .home-name,
+body.dark-theme .home-description,
+body.dark-theme .about-heading h2,
+body.dark-theme .about-information h3,
+body.dark-theme .about-information > p,
+body.dark-theme .skills-heading h2,
+body.dark-theme .skills-introduction,
+body.dark-theme .skill-card h3,
+body.dark-theme .projects-heading h2,
+body.dark-theme .projects-introduction,
+body.dark-theme .project-content h3,
+body.dark-theme .project-description,
+body.dark-theme .experience-heading h2,
+body.dark-theme .exp-meta h3,
+body.dark-theme .exp-responsibilities p,
+body.dark-theme .exp-location,
+body.dark-theme .education-heading h2,
+body.dark-theme .education-card h4,
+body.dark-theme .education-location,
+body.dark-theme .column-title,
+body.dark-theme .contact-heading h2,
+body.dark-theme .contact-introduction,
+body.dark-theme .form-group label {
+  color: #f6e5e5;
+}
+
+/* Dark-theme secondary text */
+
+body.dark-theme .home-greeting,
+body.dark-theme .home-role,
+body.dark-theme .about-heading p,
+body.dark-theme .skills-heading p,
+body.dark-theme .projects-heading p,
+body.dark-theme .experience-heading p,
+body.dark-theme .education-heading > p,
+body.dark-theme .contact-heading p,
+body.dark-theme .education-institution {
+  color: #e6b2c6;
+}
+
+/* Dark-theme skill and technology labels */
+
+body.dark-theme .skill-item,
+body.dark-theme .project-technology,
+body.dark-theme .technology-item,
+body.dark-theme .education-score {
+  color: #f6e5e5;
+  background-color: #352961;
+  border-color: #774181;
+}
+
+/* Dark-theme form fields */
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea {
+  color: #f6e5e5;
+  background-color: #20192c;
+  border-color: #774181;
+}
+
+body.dark-theme .form-group input::placeholder,
+body.dark-theme .form-group textarea::placeholder {
+  color: #e6b2c6;
+  opacity: 0.65;
+}
+
+/* Keep Navbar and Footer purple */
+
+body.dark-theme .navbar,
+body.dark-theme .footer,
+body.dark-theme .nav-links {
+  background-color: #352961;
+}
+
+body.dark-theme .footer-about p,
+body.dark-theme .footer-navigation button,
+body.dark-theme .footer-bottom p {
+  color: #d4c5e2;
+}
+
+/* Keep important cards purple */
+
+body.dark-theme .profile-card,
+body.dark-theme .about-card,
+body.dark-theme .contact-information {
+  background-color: #2a1f4e;
+  border-color: #c184d1;
+}
+
+body.dark-theme .contact-description {
+  color: #f6e5e5;
+}
+
+body.dark-theme .contact-form {
+  background-color: #2a203a;
+  border-color: #774181;
+}
+
+body.dark-theme .contact-detail-card {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: #774181;
+}
+
+/* Dark-theme profile card text */
+
+body.dark-theme .profile-card .code-line,
+body.dark-theme .profile-card .code-detail {
+  color: #f6e5e5;
+}
+
+body.dark-theme .profile-card .code-keyword {
+  color: #e6b2c6;
+}
+
+body.dark-theme .profile-card .code-name {
+  color: #ffffff;
+}
+
+body.dark-theme .profile-card .code-detail span {
+  color: #e6b2c6;
+}
+
+/* Dark-theme primary buttons */
+
+body.dark-theme .primary-button,
+body.dark-theme .about-button,
+body.dark-theme .contact-submit-button,
+body.dark-theme .project-github-link {
+  color: #ffffff;
+  background-color: #774181;
+  border-color: #774181;
+}
+
+body.dark-theme .primary-button:hover,
+body.dark-theme .about-button:hover,
+body.dark-theme .contact-submit-button:hover,
+body.dark-theme .project-github-link:hover {
+  color: #352961;
+  background-color: #e6b2c6;
+  border-color: #e6b2c6;
+}
+
+/* Dark-theme secondary buttons */
+
+body.dark-theme .secondary-button,
+body.dark-theme .project-live-link {
+  color: #f6e5e5;
+  background-color: transparent;
+  border-color: #e6b2c6;
+}
+
+body.dark-theme .secondary-button:hover,
+body.dark-theme .project-live-link:hover {
+  color: #352961;
+  background-color: #e6b2c6;
+}
+
+/* Dark-theme profile-photo circle */
+
+body.dark-theme .profile-circle {
+  background-color: #f6e5e5;
+}
+
+/* Dark-theme card text */
+
+body.dark-theme .highlight-label,
+body.dark-theme .education-location,
+body.dark-theme .project-description {
+  color: #f6e5e5;
+}
+
+/* Phone responsiveness */
+
+@media screen and (max-width: 600px) {
+  .about,
+  .skills,
+  .experience,
+  .projects,
+  .education,
+  .contact {
+    padding-top: 35px;
+  }
+}
