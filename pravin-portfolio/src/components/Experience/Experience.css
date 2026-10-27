@@ -1,5 +1,5 @@
 .experience {
-  padding: 60px 5% 100px;
+  padding: 20px 5% 100px;
   background-color: var(--white-color);
 }
 
@@ -141,12 +141,21 @@
   color: var(--secondary-color);
   font-size: 0.95rem;
   font-weight: 600;
+  margin-top: 6px;
 }
 
 .exp-location {
   color: var(--primary-color);
   font-size: 0.82rem;
   opacity: 0.65;
+}
+
+.exp-location-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
 }
 
 .exp-type-row {
@@ -228,6 +237,7 @@
   font-size: 0.92rem;
   line-height: 1.7;
   opacity: 0.85;
+  text-align: justify;
 }
 
 /* Tech tags */
@@ -306,7 +316,7 @@ body.dark-theme .exp-divider {
 
 @media screen and (max-width: 700px) {
   .experience {
-    padding: 45px 20px 75px;
+    padding: 15px 20px 75px;
   }
 
   .experience-timeline {
@@ -362,5 +372,11 @@ body.dark-theme .exp-divider {
 
   .exp-card {
     padding: 22px 16px;
+  }
+
+  .exp-location-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 }

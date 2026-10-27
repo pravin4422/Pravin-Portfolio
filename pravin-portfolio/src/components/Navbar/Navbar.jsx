@@ -1,5 +1,16 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
+
+const navigationItems = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
+  { id: "certifications", label: "Certifications" },
+  { id: "education", label: "Education" },
+  { id: "contact", label: "Contact" },
+];
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,16 +19,6 @@ function Navbar() {
   const [darkTheme, setDarkTheme] = useState(() => {
     return localStorage.getItem("portfolio-theme") === "dark";
   });
-
-  const navigationItems = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-    { id: "experience", label: "Experience" },
-    { id: "projects", label: "Projects" },
-    { id: "education", label: "Education" },
-    { id: "contact", label: "Contact" },
-  ];
 
   useEffect(() => {
     if (darkTheme) {
@@ -29,18 +30,32 @@ function Navbar() {
     }
   }, [darkTheme]);
 
+  const isScrollingRef = React.useRef(false);
+  const scrollTimerRef = React.useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
+      if (isScrollingRef.current) return;
+
       const navbarHeight = 90;
       const scrollPosition = window.scrollY + navbarHeight + 20;
 
       let currentSection = "home";
+      let minDistance = Infinity;
 
       navigationItems.forEach((item) => {
         const section = document.getElementById(item.id);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
 
-        if (section && section.offsetTop <= scrollPosition) {
-          currentSection = item.id;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            const distance = scrollPosition - sectionTop;
+            if (distance < minDistance) {
+              minDistance = distance;
+              currentSection = item.id;
+            }
+          }
         }
       });
 
@@ -48,7 +63,6 @@ function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     handleScroll();
 
     return () => {
@@ -61,16 +75,19 @@ function Navbar() {
 
     if (section) {
       const navbarHeight = window.innerWidth <= 850 ? 70 : 75;
-      const sectionPosition =
-        section.getBoundingClientRect().top + window.scrollY;
+      const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
       const scrollPosition = sectionPosition - navbarHeight;
 
-      window.scrollTo({
-        top: scrollPosition,
-        behavior: "smooth",
-      });
+      isScrollingRef.current = true;
+      clearTimeout(scrollTimerRef.current);
 
       setActiveSection(sectionId);
+
+      window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+
+      scrollTimerRef.current = setTimeout(() => {
+        isScrollingRef.current = false;
+      }, 800);
     }
 
     setMenuOpen(false);

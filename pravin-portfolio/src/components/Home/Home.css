@@ -56,12 +56,13 @@
   font-size: 1rem;
   line-height: 1.8;
   opacity: 0.85;
+  text-indent: 1.5em;
+  text-align: justify;
 }
 
 /* Home buttons */
 
 .home-buttons {
-  margin-top: 32px;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -143,8 +144,8 @@
 }
 
 .profile-circle {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto 30px;
   border: 5px solid var(--accent-color);
   border-radius: 50%;
@@ -189,6 +190,30 @@
   color: var(--accent-color);
 }
 
+/* Home social icons */
+
+.home-socials {
+  margin-top: 28px;
+  margin-bottom: 28px;
+  display: flex;
+  gap: 26px;
+}
+
+.home-social-icon {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+  transition: opacity 0.25s ease, transform 0.25s ease, color 0.25s ease;
+}
+
+.home-social-icon:hover {
+  opacity: 1;
+  color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
 /* Tablet design */
 
 @media screen and (max-width: 900px) {
@@ -209,6 +234,10 @@
   }
 
   .home-buttons {
+    justify-content: center;
+  }
+
+  .home-socials {
     justify-content: center;
   }
 
@@ -247,6 +276,8 @@
     margin-top: 14px;
     font-size: 0.9rem;
     line-height: 1.7;
+    text-align: left;
+    text-indent: 0;
   }
 
   .home-buttons {
@@ -275,8 +306,8 @@
   }
 
   .profile-circle {
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
     margin-bottom: 16px;
   }
 

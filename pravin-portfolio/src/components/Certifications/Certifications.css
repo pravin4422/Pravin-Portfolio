@@ -1,0 +1,222 @@
+.certifications {
+  padding: 20px 5% 100px;
+  background-color: var(--white-color);
+}
+
+.certifications-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section heading */
+
+.certifications-heading {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.certifications-heading > p:first-child {
+  margin-bottom: 5px;
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.certifications-heading h2 {
+  color: var(--primary-color);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+}
+
+.certifications-heading-line {
+  width: 75px;
+  height: 4px;
+  margin: 14px auto 18px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}
+
+.certifications-intro {
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Cards grid */
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* Individual card */
+
+.cert-card {
+  padding: 24px;
+  border: 2px solid var(--accent-color);
+  border-radius: 18px;
+  background-color: var(--white-color);
+
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 12px 25px var(--shadow-color);
+  transform: translateY(-5px);
+}
+
+/* Icon */
+
+.cert-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--secondary-color);
+  background-color: var(--background-color);
+}
+
+/* Card body */
+
+.cert-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.cert-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.cert-top h3 {
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+/* Category badge */
+
+.cert-badge {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cert-badge--cert {
+  color: #352961;
+  background-color: #e6b2c6;
+}
+
+.cert-badge--course {
+  color: #ffffff;
+  background-color: #774181;
+}
+
+.cert-badge--academic {
+  color: #352961;
+  background-color: #d4c5e2;
+}
+
+/* Organization */
+
+.cert-org {
+  color: var(--secondary-color);
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Footer row */
+
+.cert-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cert-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+/* View Certificate link */
+
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1.5px solid var(--secondary-color);
+
+  color: var(--secondary-color);
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.cert-link:hover {
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+}
+
+/* Tablet */
+
+@media screen and (max-width: 900px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+  .certifications {
+    padding: 15px 20px 75px;
+  }
+
+  .certifications-heading {
+    margin-bottom: 35px;
+  }
+
+  .cert-card {
+    padding: 20px 18px;
+  }
+
+  .cert-top {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

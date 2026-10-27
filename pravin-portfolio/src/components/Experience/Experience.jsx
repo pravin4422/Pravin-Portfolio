@@ -61,8 +61,8 @@ function Experience() {
                       </div>
                     </div>
                     <h4>{exp.company}</h4>
-                    <p className="exp-location">{exp.location}</p>
-                    <div className="exp-type-row">
+                    <div className="exp-location-row">
+                      <p className="exp-location">{exp.location}</p>
                       <span className="exp-type">{exp.type}</span>
                     </div>
                   </div>

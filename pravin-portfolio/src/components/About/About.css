@@ -1,5 +1,5 @@
 .about {
-  padding: 60px 5% 80px;
+  padding: 20px 5% 80px;
   background-color: var(--white-color);
 }
 
@@ -45,7 +45,7 @@
 .about-content {
   display: grid;
   grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
-  align-items: stretch;
+  align-items: start;
   gap: 55px;
 }
 
@@ -53,7 +53,7 @@
 
 .about-card {
   position: relative;
-  padding: 40px 35px;
+  padding: 40px 35px 50px;
   border-radius: 20px;
 
   display: flex;
@@ -89,15 +89,62 @@
   position: relative;
   margin-bottom: 15px;
   color: var(--white-color);
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   line-height: 1.3;
 }
 
 .about-card p {
   position: relative;
   color: var(--background-color);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   line-height: 1.75;
+  text-indent: 1.5em;
+  text-align: justify;
+}
+
+/* Card highlights */
+
+.about-card-highlights {
+  position: relative;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-card-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: var(--background-color);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.about-card-highlight-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+}
+
+.about-card-highlight-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.about-card-highlight-text strong {
+  color: var(--white-color);
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.about-card-highlight-text span {
+  color: var(--accent-color);
+  font-size: 0.95rem;
+  opacity: 0.85;
 }
 
 /* Right-side information */
@@ -122,6 +169,8 @@
   font-size: 0.97rem;
   line-height: 1.75;
   opacity: 0.82;
+  text-indent: 1.5em;
+  text-align: justify;
 }
 
 /* Highlight boxes */
@@ -245,7 +294,7 @@ body.dark-theme .highlight-label {
 
 @media screen and (max-width: 900px) {
   .about {
-    padding: 55px 5% 70px;
+    padding: 20px 5% 70px;
   }
 
   .about-content {
@@ -262,7 +311,7 @@ body.dark-theme .highlight-label {
 
 @media screen and (max-width: 600px) {
   .about {
-    padding: 40px 20px 60px;
+    padding: 15px 20px 60px;
   }
 
   .about-heading {

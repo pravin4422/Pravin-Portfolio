@@ -1,6 +1,6 @@
 .contact {
-  padding: 60px 5% 100px;
-  background-color: var(--background-color);
+  padding: 20px 5% 100px;
+  background-color: var(--white-color);
 }
 
 .contact-container {
@@ -87,6 +87,8 @@
   color: var(--background-color);
   font-size: 0.95rem;
   line-height: 1.8;
+  text-indent: 1.5em;
+  text-align: justify;
 }
 
 /* Contact details */
@@ -182,7 +184,7 @@
   padding: 38px;
   border: 2px solid var(--accent-color);
   border-radius: 20px;
-  background-color: var(--white-color);
+  background-color: var(--background-color);
   box-shadow: 0 12px 30px var(--shadow-color);
 }
 
@@ -272,13 +274,17 @@
   .contact-content {
     grid-template-columns: 1fr;
   }
+
+  .contact-introduction {
+    margin-bottom: 40px;
+  }
 }
 
 /* Mobile view */
 
 @media screen and (max-width: 600px) {
   .contact {
-    padding: 45px 20px 75px;
+    padding: 15px 20px 75px;
   }
 
   .contact-introduction {

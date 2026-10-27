@@ -149,6 +149,7 @@ a {
 .skills,
 .experience,
 .projects,
+.certifications,
 .education,
 .contact {
   padding-top: 45px;
@@ -159,14 +160,20 @@ a {
 body.dark-theme .home,
 body.dark-theme .skills,
 body.dark-theme .projects,
-body.dark-theme .contact {
+body.dark-theme .education {
   background-color: #171321;
 }
 
 body.dark-theme .about,
 body.dark-theme .experience,
-body.dark-theme .education {
+body.dark-theme .certifications,
+body.dark-theme .contact {
   background-color: #20192c;
+}
+
+body.dark-theme .cert-card {
+  background-color: #2a1f4e;
+  border-color: #774181;
 }
 
 /* Dark-theme cards */
@@ -360,6 +367,16 @@ body.dark-theme .project-live-link:hover {
   background-color: #e6b2c6;
 }
 
+/* Dark-theme home social icons */
+
+body.dark-theme .home-social-icon {
+  color: #e6b2c6;
+}
+
+body.dark-theme .home-social-icon:hover {
+  color: #ffffff;
+}
+
 /* Dark-theme profile-photo circle */
 
 body.dark-theme .profile-circle {
@@ -374,6 +391,25 @@ body.dark-theme .project-description {
   color: #f6e5e5;
 }
 
+body.dark-theme .cert-icon {
+  background-color: #352961;
+}
+
+body.dark-theme .cert-top h3,
+body.dark-theme .certifications-heading h2 {
+  color: #f6e5e5;
+}
+
+body.dark-theme .certifications-heading > p:first-child,
+body.dark-theme .certifications-intro,
+body.dark-theme .cert-org {
+  color: #e6b2c6;
+}
+
+body.dark-theme .cert-date {
+  color: #f6e5e5;
+}
+
 /* Phone responsiveness */
 
 @media screen and (max-width: 600px) {
@@ -381,6 +417,7 @@ body.dark-theme .project-description {
   .skills,
   .experience,
   .projects,
+  .certifications,
   .education,
   .contact {
     padding-top: 35px;
