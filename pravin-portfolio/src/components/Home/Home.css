@@ -217,6 +217,11 @@
 /* Tablet design */
 
 @media screen and (max-width: 900px) {
+  .home {
+    min-height: unset;
+    padding-top: 95px;
+  }
+
   .home-container {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -251,8 +256,8 @@
 
 @media screen and (max-width: 480px) {
   .home {
-    min-height: 100dvh;
-    padding: 85px 18px 50px;
+    min-height: unset;
+    padding: 76px 18px 50px;
   }
 
   .home-container {

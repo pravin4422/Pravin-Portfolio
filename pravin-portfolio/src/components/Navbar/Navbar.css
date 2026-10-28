@@ -55,7 +55,8 @@
   gap: 1.5rem;
 }
 
-.nav-links button {
+.nav-links button,
+.nav-links .nav-button {
   position: relative;
   padding: 5px 0;
   border: none;
@@ -67,7 +68,8 @@
   font-weight: 500;
 }
 
-.nav-links button::after {
+.nav-links button::after,
+.nav-links .nav-button::after {
   content: "";
   position: absolute;
   left: 0;
@@ -80,24 +82,29 @@
   transition: width 0.3s ease;
 }
 
-.nav-links button:hover {
+.nav-links button:hover,
+.nav-links .nav-button:hover {
   color: var(--accent-color);
 }
 
-.nav-links button:hover::after {
+.nav-links button:hover::after,
+.nav-links .nav-button:hover::after {
   width: 100%;
 }
 /* Active Navbar section */
 
-.nav-links button.active-link {
+.nav-links button.active-link,
+.nav-links .nav-button.active-link {
   color: var(--accent-color);
 }
 
-.nav-links button.active-link::after {
+.nav-links button.active-link::after,
+.nav-links .nav-button.active-link::after {
   width: 100%;
 }
 
-.nav-links button.active-link {
+.nav-links button.active-link,
+.nav-links .nav-button.active-link {
   font-weight: 700;
 }
 /* Light and dark theme button */
@@ -168,7 +175,8 @@
     gap: 1rem;
   }
 
-  .nav-links button {
+  .nav-links button,
+  .nav-links .nav-button {
     font-size: 0.82rem;
   }
 
@@ -215,7 +223,8 @@
     width: 100%;
   }
 
-  .nav-links button {
+  .nav-links button,
+  .nav-links .nav-button {
     width: 100%;
     padding: 14px 24px;
     text-align: left;
