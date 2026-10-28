@@ -239,51 +239,61 @@
 
 @media screen and (max-width: 650px) {
   .projects {
-    padding: 15px 20px 75px;
+    padding: 15px 18px 70px;
+  }
+
+  .projects-heading h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
 
   .projects-introduction {
-    margin-bottom: 40px;
-    font-size: 0.95rem;
+    margin-bottom: 30px;
+    font-size: 0.88rem;
+    line-height: 1.6;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .project-card {
     min-height: auto;
+    border-radius: 16px;
+  }
+
+  .project-card-top {
+    min-height: 110px;
+    padding: 18px;
+  }
+
+  .project-number {
+    font-size: 2.8rem;
+  }
+
+  .project-content {
+    padding: 20px 18px;
+  }
+
+  .project-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .project-description {
+    font-size: 0.88rem;
+    text-indent: 0;
+    margin-bottom: 16px;
   }
 
   .project-links {
+    padding: 0 18px 20px;
     flex-direction: column;
+    gap: 10px;
   }
 
   .project-link {
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .project-card-top {
-    min-height: 130px;
-    padding: 20px;
-    flex-wrap: wrap;
-  }
-
-  .project-badges {
-    align-items: flex-start;
-  }
-
-  .project-number {
-    font-size: 3rem;
-  }
-
-  .project-content {
-    padding: 22px 20px;
-  }
-
-  .project-links {
-    padding: 0 20px 22px;
+    padding: 11px;
   }
 }

@@ -1,5 +1,6 @@
 import "./Home.css";
 import profilePhoto from "../../assets/profile-photo.jpeg";
+import { scrollToSection } from "../../utils/scrollToSection";
 
 const profilePhoto2 = new URL("../../assets/profile-photo-2.png", import.meta.url).href;
 
@@ -82,7 +83,7 @@ function Home() {
                 View Resume
               </a>
 
-            <a href="#contact" className="secondary-button">
+            <a href="#contact" className="secondary-button" onClick={(e) => { e.preventDefault(); scrollToSection("contact"); }}>
               Get in Touch
             </a>
           </div>

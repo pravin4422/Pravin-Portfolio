@@ -181,7 +181,7 @@
 
 @media screen and (max-width: 850px) {
   .navbar {
-    height: 70px;
+    height: 60px;
   }
 
   .menu-button {
@@ -190,15 +190,15 @@
 
   .nav-links {
     position: absolute;
-    top: 70px;
+    top: 60px;
     left: -100%;
 
     width: 100%;
-    max-height: calc(100vh - 70px);
-    padding: 25px 0;
+    max-height: calc(100vh - 60px);
+    padding: 20px 0;
 
     flex-direction: column;
-    gap: 18px;
+    gap: 4px;
 
     background-color: var(--primary-color);
     box-shadow: 0 8px 15px var(--shadow-color);
@@ -211,15 +211,22 @@
     left: 0;
   }
 
+  .nav-links li {
+    width: 100%;
+  }
+
   .nav-links button {
+    width: 100%;
+    padding: 14px 24px;
+    text-align: left;
     color: var(--white-color);
     font-size: 1rem;
   }
 
   .theme-button {
-    width: 38px;
-    height: 38px;
-    font-size: 1.15rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
   }
 
   /* Change hamburger icon into X */
@@ -240,34 +247,43 @@
 /* Small phone Navbar */
 
 @media screen and (max-width: 480px) {
+  .navbar {
+    height: 56px;
+  }
+
   .navbar-container {
-    width: calc(100% - 40px);
+    width: calc(100% - 36px);
   }
 
   .navbar-logo {
-    font-size: 1.45rem;
+    font-size: 1.35rem;
   }
 
   .navbar-actions {
-    gap: 14px;
+    gap: 12px;
   }
 
   .theme-button {
-    width: 36px;
-    height: 36px;
-    font-size: 1.05rem;
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
   }
 
   .menu-button {
-    width: 29px;
-    height: 23px;
+    width: 27px;
+    height: 21px;
+  }
+
+  .nav-links {
+    top: 56px;
+    max-height: calc(100vh - 56px);
   }
 
   .menu-button.active span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg);
   }
 
   .menu-button.active span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
   }
 }

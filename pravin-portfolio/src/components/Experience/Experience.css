@@ -316,11 +316,15 @@ body.dark-theme .exp-divider {
 
 @media screen and (max-width: 700px) {
   .experience {
-    padding: 15px 20px 75px;
+    padding: 15px 18px 70px;
+  }
+
+  .experience-heading h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
 
   .experience-timeline {
-    padding-left: 38px;
+    padding-left: 36px;
   }
 
   .experience-timeline::before {
@@ -329,8 +333,8 @@ body.dark-theme .exp-divider {
   }
 
   .timeline-marker {
-    top: 28px;
-    left: -38px;
+    top: 26px;
+    left: -36px;
     width: 26px;
     height: 26px;
     border-width: 4px;
@@ -342,17 +346,22 @@ body.dark-theme .exp-divider {
   }
 
   .exp-card {
-    padding: 24px 20px;
-    box-shadow: 8px 8px 0 var(--accent-color);
-  }
-
-  .exp-card-top {
-    gap: 14px;
+    padding: 20px 16px;
+    box-shadow: 6px 6px 0 var(--accent-color);
+    border-radius: 16px;
   }
 
   .exp-meta-header {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .exp-meta h3 {
+    font-size: 1.1rem;
+  }
+
+  .exp-responsibilities p {
+    font-size: 0.88rem;
   }
 
   .exp-date {
@@ -371,7 +380,7 @@ body.dark-theme .exp-divider {
   }
 
   .exp-card {
-    padding: 22px 16px;
+    padding: 18px 14px;
   }
 
   .exp-location-row {

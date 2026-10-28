@@ -311,60 +311,90 @@ body.dark-theme .highlight-label {
 
 @media screen and (max-width: 600px) {
   .about {
-    padding: 15px 20px 60px;
+    padding: 15px 18px 60px;
   }
 
   .about-heading {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 
   .about-heading p {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+  }
+
+  .about-heading h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
 
   .about-content {
-    gap: 38px;
+    gap: 30px;
   }
 
   .about-card {
-    padding: 32px 24px;
-    box-shadow: 9px 9px 0 var(--accent-color);
+    padding: 24px 18px;
+    box-shadow: 6px 6px 0 var(--accent-color);
+    border-radius: 16px;
+  }
+
+  .about-card-body {
+    margin-top: 60px;
   }
 
   .about-number {
-    top: 18px;
-    right: 20px;
-    font-size: 5rem;
+    top: 14px;
+    right: 16px;
+    font-size: 4.5rem;
   }
 
   .about-card h3 {
-    font-size: 1.55rem;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
   }
 
   .about-card p {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     line-height: 1.7;
+    text-indent: 0;
+  }
+
+  .about-card-highlights {
+    gap: 18px;
+  }
+
+  .about-card-highlight-text strong {
+    font-size: 1rem;
   }
 
   .about-information h3 {
-    font-size: 1.65rem;
+    font-size: 1.5rem;
   }
 
   .about-information > p {
-    font-size: 0.92rem;
+    font-size: 0.88rem;
+    text-indent: 0;
   }
 
   .about-highlights {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 
   .highlight-item {
-    min-height: 90px;
-    padding: 15px 10px;
+    min-height: 80px;
+    padding: 12px 8px;
+  }
+
+  .highlight-number {
+    font-size: 1.25rem;
+  }
+
+  .highlight-label {
+    font-size: 0.7rem;
   }
 
   .about-button {
     width: 100%;
+    padding: 13px 20px;
   }
 }

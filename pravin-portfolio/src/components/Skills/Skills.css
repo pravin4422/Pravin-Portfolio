@@ -153,24 +153,47 @@
 
 @media screen and (max-width: 600px) {
   .skills {
-    padding: 15px 20px 75px;
+    padding: 15px 18px 70px;
+  }
+
+  .skills-heading h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
 
   .skills-introduction {
-    margin-bottom: 40px;
-    font-size: 0.95rem;
+    margin-bottom: 30px;
+    font-size: 0.88rem;
+    line-height: 1.6;
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .skill-card {
     min-height: auto;
-    padding: 24px;
+    padding: 20px 18px;
+    border-radius: 14px;
   }
 
   .skill-card-header {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    gap: 12px;
+  }
+
+  .skill-card-number {
+    width: 36px;
+    height: 36px;
+    font-size: 0.8rem;
+  }
+
+  .skill-card h3 {
+    font-size: 1rem;
+  }
+
+  .skill-item {
+    padding: 6px 11px;
+    font-size: 0.78rem;
   }
 }

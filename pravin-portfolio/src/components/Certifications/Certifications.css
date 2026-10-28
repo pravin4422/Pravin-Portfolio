@@ -204,19 +204,49 @@
 
 @media screen and (max-width: 600px) {
   .certifications {
-    padding: 15px 20px 75px;
+    padding: 15px 18px 70px;
   }
 
   .certifications-heading {
-    margin-bottom: 35px;
+    margin-bottom: 28px;
+  }
+
+  .certifications-heading h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
 
   .cert-card {
-    padding: 20px 18px;
+    padding: 18px 14px;
+    gap: 14px;
+    border-radius: 14px;
+  }
+
+  .cert-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
   }
 
   .cert-top {
     flex-direction: column;
     gap: 6px;
+  }
+
+  .cert-top h3 {
+    font-size: 0.95rem;
+  }
+
+  .cert-org {
+    font-size: 0.82rem;
+  }
+
+  .cert-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cert-link {
+    align-self: flex-start;
   }
 }

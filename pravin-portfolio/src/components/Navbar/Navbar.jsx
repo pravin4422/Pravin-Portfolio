@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
+import { getNavbarHeight, scrollToSection as scrollTo } from "../../utils/scrollToSection";
 
 const navigationItems = [
   { id: "home", label: "Home" },
@@ -37,8 +38,7 @@ function Navbar() {
     const handleScroll = () => {
       if (isScrollingRef.current) return;
 
-      const navbarHeight = 90;
-      const scrollPosition = window.scrollY + navbarHeight + 20;
+      const scrollPosition = window.scrollY + getNavbarHeight() + 10;
 
       let currentSection = "home";
       let minDistance = Infinity;
@@ -71,25 +71,13 @@ function Navbar() {
   }, []);
 
   const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-
-    if (section) {
-      const navbarHeight = window.innerWidth <= 850 ? 70 : 75;
-      const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
-      const scrollPosition = sectionPosition - navbarHeight;
-
-      isScrollingRef.current = true;
-      clearTimeout(scrollTimerRef.current);
-
-      setActiveSection(sectionId);
-
-      window.scrollTo({ top: scrollPosition, behavior: "smooth" });
-
-      scrollTimerRef.current = setTimeout(() => {
-        isScrollingRef.current = false;
-      }, 800);
-    }
-
+    isScrollingRef.current = true;
+    clearTimeout(scrollTimerRef.current);
+    setActiveSection(sectionId);
+    scrollTo(sectionId);
+    scrollTimerRef.current = setTimeout(() => {
+      isScrollingRef.current = false;
+    }, 800);
     setMenuOpen(false);
   };
 

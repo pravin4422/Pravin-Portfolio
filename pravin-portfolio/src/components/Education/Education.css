@@ -265,15 +265,31 @@
 
 @media screen and (max-width: 600px) {
   .education {
-    padding: 15px 20px 75px;
+    padding: 15px 18px 70px;
   }
 
   .education-heading {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+  }
+
+  .education-heading h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .column-title {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+
+  .column-title span {
+    width: 38px;
+    height: 38px;
+    font-size: 0.78rem;
   }
 
   .education-card {
-    padding: 24px 20px;
+    padding: 20px 16px;
+    border-radius: 14px;
   }
 
   .education-card-header {
@@ -289,15 +305,29 @@
     gap: 8px;
   }
 
+  .education-card h4 {
+    font-size: 1.05rem;
+  }
+
   .achievement-card {
-    padding: 22px 18px;
+    padding: 18px 14px;
     align-items: flex-start;
-    box-shadow: 6px 6px 0 var(--accent-color);
+    box-shadow: 5px 5px 0 var(--accent-color);
+    border-radius: 14px;
   }
 
   .achievement-number {
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
+    font-size: 0.9rem;
+  }
+
+  .achievement-information h4 {
+    font-size: 1rem;
+  }
+
+  .achievement-event {
+    font-size: 0.85rem;
   }
 
   .achievement-header {
@@ -312,7 +342,7 @@
   }
 
   .achievement-number {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
   }
 }

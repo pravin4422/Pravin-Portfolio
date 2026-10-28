@@ -284,21 +284,57 @@
 
 @media screen and (max-width: 600px) {
   .contact {
-    padding: 15px 20px 75px;
+    padding: 15px 18px 70px;
+  }
+
+  .contact-heading h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
 
   .contact-introduction {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 0.85rem;
+    line-height: 1.6;
   }
 
   .contact-information,
   .contact-form {
-    padding: 28px 22px;
+    padding: 24px 18px;
+    border-radius: 16px;
   }
 
   .contact-information {
-    box-shadow: 8px 8px 0 var(--accent-color);
+    box-shadow: 6px 6px 0 var(--accent-color);
+  }
+
+  .contact-information h3 {
+    font-size: 1.4rem;
+  }
+
+  .contact-description {
+    font-size: 0.88rem;
+    text-indent: 0;
+  }
+
+  .contact-detail-card {
+    padding: 13px;
+    gap: 12px;
+  }
+
+  .contact-detail-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 11px 13px;
+    font-size: 0.88rem;
+  }
+
+  .contact-submit-button {
+    padding: 13px 20px;
+    font-size: 0.9rem;
   }
 }
 
@@ -310,5 +346,6 @@
   .contact-social-links a {
     width: 100%;
     text-align: center;
+    justify-content: center;
   }
 }
