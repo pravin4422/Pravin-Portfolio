@@ -215,6 +215,7 @@
 
 .achievement-information {
   flex-grow: 1;
+  min-width: 0;
 }
 
 .achievement-header {
@@ -299,7 +300,7 @@
   }
 
   .education-card-meta {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 8px;
@@ -311,7 +312,7 @@
 
   .achievement-card {
     padding: 18px 14px;
-    align-items: flex-start;
+    align-items: center;
     box-shadow: 5px 5px 0 var(--accent-color);
     border-radius: 14px;
   }
